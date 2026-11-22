@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=STELLAREI
+Comment=A local-first Personal Time Intelligence System — observes how you spend time on your own computer and helps you understand and decide what to do next, entirely offline. No account, no cloud, no telemetry.
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/stellarei %u
+Terminal=false
+Type=Application
+Icon=stellarei
+Categories=Utility;
+StartupWMClass=stellarei
+
+ 

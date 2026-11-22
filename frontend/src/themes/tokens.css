@@ -1,0 +1,84 @@
+/*
+ * STELLAREI design tokens - "Midnight" (default theme).
+ *
+ * These are CSS custom properties, not Tailwind config, so that Theme
+ * Studio (Phase 8) can rewrite them at runtime via
+ * document.documentElement.style.setProperty(...) for live preview
+ * without a rebuild. Components reference var(--token-name) - never a
+ * literal hex value - see frontend/src/themes/themes.ts for the type
+ * that keeps this file and the theme JSON format in sync.
+ */
+
+:root {
+  /* Surfaces */
+  --background: #0b0d10;
+  --backgroundElevated: #101317;
+  --surface: #15181d;
+  --surfaceHover: #1b1f25;
+  --surfaceActive: #21262d;
+  --border: #262b33;
+
+  /* Text */
+  --text: #e8eaed;
+  --textMuted: #9aa1ac;
+
+  /* Accent & status */
+  --accent: #6ea8fe;
+  --accentHover: #8ebbff;
+  --success: #4caf82;
+  --warning: #d9a441;
+  --danger: #e0616b;
+  --info: #6ea8fe;
+
+  /* Charts & timeline categories */
+  --chartPrimary: #6ea8fe;
+  --chartSecondary: #9b7ede;
+  --timelineDevelopment: #6ea8fe;
+  --timelineDesign: #d98ee0;
+  --timelineMusic: #f2b84b;
+  --timelineGaming: #e0616b;
+  --timelineResearch: #4caf82;
+  --timelineIdle: #3a4048;
+
+  /* Type & spacing scale */
+  --font-sans:
+    -apple-system, "Segoe UI Variable", "Segoe UI", Inter, system-ui, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", ui-monospace, monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reduced-motion (spec section 68 - accessibility) lives in app.css,
+   not here - a genuine duplicate of this exact block existed in both
+   files until this session (two different accessibility passes each
+   added it, neither aware the other already had). app.css's version
+   is kept because it additionally covers scroll-behavior; removed
+   from here rather than the other way around. */

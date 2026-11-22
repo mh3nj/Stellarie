@@ -1,0 +1,29 @@
+# build/config.yml
+#
+# Wails v3 project metadata. The real `wails3` build system (Task +
+# these generated Taskfiles) reads this when producing icons, platform
+# manifests (macOS Info.plist / Windows build/windows/info.json), and
+# installers — see https://v3.wails.io/concepts/build-system/ and
+# https://v3.wails.io/guides/cli/ (the `-config` flag on `wails3 dev`
+# defaults to exactly this path).
+#
+# HONESTY NOTE (see README's Phase 13 section for the full context):
+# this file was hand-authored against Wails v3's own documented example
+# structure, NOT generated or validated by a real `wails3 init` /
+# `wails3 generate` run — the CLI requires Go >= 1.25, which this
+# sandbox cannot obtain (apt's newest package is 1.24, and Go's own
+# toolchain auto-fetch is blocked by network policy — both confirmed
+# empirically, not assumed). Treat the field VALUES below as accurate
+# (they're real project facts, not placeholders) but treat the file's
+# mere existence as scaffolding for whoever next has real `wails3`
+# tooling to verify and extend, not as proof packaging has been tested.
+#
+# version stays unprefixed ("0.1.0", not "v0.1.0") — Wails' own NSIS
+# packaging step requires a plain numeric version string.
+
+info:
+  productName: "STELLAREI"
+  productIdentifier: "com.dahgan.stellarei"
+  productVersion: "0.1.0"
+  companyName: "DAHGAN Studio"
+  productDescription: "A local-first Personal Time Intelligence System — observes how you spend time on your own computer and helps you understand and decide what to do next, entirely offline. No account, no cloud, no telemetry."

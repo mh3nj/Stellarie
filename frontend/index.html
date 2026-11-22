@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>STELLAREI</title>
+    <!-- Favicons live in public/ (copied verbatim into dist/ by Vite);
+         the .ico carries 16-256px so WebView2 never upscales a blurry
+         small size. Sources live in /public too - no bundler imports
+         needed for links that must exist before the JS bundle runs. -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- theme tokens load before React mounts so there is never an
+         unstyled/wrong-color flash while the bundle boots -->
+    <link rel="stylesheet" href="/src/themes/tokens.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
