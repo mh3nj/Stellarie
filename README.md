@@ -68,24 +68,15 @@ That means this repository is now a historical, standalone release of STELLAREI.
 
 ## Building from source
 
-This repository contains the original Go/Wails and React/TypeScript application. The build toolchain and platform dependencies are version-sensitive, so consult [`PACKAGING.md`](PACKAGING.md) before attempting a build.
+This repository preserves the original Go/Wails and React/TypeScript
+implementation.
 
-At a high level, you will need:
+The original build configuration is retained in the repository,
+but this project is no longer actively maintained. Build compatibility
+may depend on the original toolchain and platform dependencies.
 
-- Go version compatible with the `go.mod` directive
-- Node.js and npm
-- The Wails v3 CLI version used by this project
-- Platform-specific Wails build dependencies
-
-Install frontend dependencies:
-
-```bash
-cd frontend
-npm ci
-cd ..
-```
-
-Then follow the platform-specific instructions in [`PACKAGING.md`](PACKAGING.md).
+For a ready-to-install Windows build, see the
+[latest release](https://github.com/mh3nj/Stellarie/releases/latest).
 
 ## Repository
 
